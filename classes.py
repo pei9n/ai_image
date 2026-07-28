@@ -55,7 +55,7 @@ class Wallet:
 
 
 class ML_model: # ML_модель
-    def __init__(self, id_model: int, description: str, cost_predict: float):
+    def __init__(self, id_model: int, description: str, cost_predict: float) -> ML_model:
         # идентификатор модели, описание модели, стоимость одного предсказания
         self.id_model = id_model
         self.description = description
@@ -65,7 +65,7 @@ class ML_model: # ML_модель
 
 
 class ML_task: # МL-задача
-    def __init__(self, data, status: str, user: User, model: ML_model):
+    def __init__(self, data, status: str, user: User, model: ML_model) -> ML_task:
         # входные данные, статус выполнения, ссылка на пользователя, ссылка на ML-модель
         self.data = data
         self.status = TaskStatus.Pending
