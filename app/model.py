@@ -55,17 +55,17 @@ class Wallet:
 
 
 class ML_model: # ML_модель
-    def __init__(self, id_model: int, description: str, cost_predict: float) -> ML_model:
+    def __init__(self, id_model: int, description: str, cost_predict: float):
         # идентификатор модели, описание модели, стоимость одного предсказания
         self.id_model = id_model
         self.description = description
         self.cost_predict = cost_predict
     def predict(self, image_data): # метод выполнения предсказания 
-        return {'digit': digit, 'confidence': confidence}
+        return {'digit': 0.5, 'confidence': 0.8} # возвращает словарь с предсказанным числом и уверенностью
 
 
-class ML_task: # МL-задача
-    def __init__(self, data, status: str, user: User, model: ML_model) -> ML_task:
+class ML_task: # МL-задача      
+    def __init__(self, data, status: str, user: User, model: ML_model):
         # входные данные, статус выполнения, ссылка на пользователя, ссылка на ML-модель
         self.data = data
         self.status = TaskStatus.Pending
